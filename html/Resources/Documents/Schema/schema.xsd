@@ -1,0 +1,282 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:pws="pws" version="1.0" elementFormDefault="qualified" targetNamespace="pws">
+   <annotation>
+      <appinfo>Project Wide Specification (PWS)</appinfo>
+      <documentation>
+         Version 1.0.
+
+         Actual specification evolution &amp; discussion takes place at //github.com/JackoRo/SWEngPWS where pull requests can be made.
+      </documentation>
+   </annotation>
+   <attributeGroup name="position">
+      <annotation>
+         <documentation>The position and size (offset) of an element. The width and height of an element is defined as the difference between the (x1, y1) and (x2, y2) coordinates.</documentation>
+      </annotation>
+      <attribute name="x1" type="decimal">
+        <annotation><documentation>The x1 co-ordinate of the top left corner of the element</documentation></annotation>
+     </attribute>
+      <attribute name="y1" type="decimal">
+        <annotation><documentation>The y1 co-ordinate of the top left corner of the element</documentation></annotation>
+     </attribute>
+      <attribute name="x2" type="decimal">
+        <annotation><documentation>The x1 co-ordinate of the bottom right corner of the element</documentation></annotation>
+     </attribute>
+      <attribute name="y2" type="decimal">
+        <annotation><documentation>The y1 co-ordinate of the bottom right corner of the element</documentation></annotation>
+     </attribute>
+   </attributeGroup>
+   <attributeGroup name="fonts">
+      <annotation>
+         <documentation>All text formatting options (except color). If these attributes are omitted on an element, it will inherit them from its parent</documentation>
+      </annotation>
+      <attribute name="font" type="string">
+         <annotation>
+            <documentation>The font family to be used. If the specified family is not available, the implementor may define a fallback.</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="italic" type="boolean">
+         <annotation>
+            <documentation>Whether the text should be italic.</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="bold" type="boolean">
+         <annotation>
+            <documentation>Whether the text should be bold.</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="textsize" type="int">
+         <annotation>
+            <documentation>The size (in points)</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="underline" type="boolean">
+         <annotation>
+            <documentation>Whether the text should be underlined.</documentation>
+         </annotation>
+      </attribute>
+   </attributeGroup>
+   <attributeGroup name="colors">
+      <annotation>
+         <documentation>Defines the fill color and the foreground/stroke/text color</documentation>
+      </annotation>
+      <attribute name="color" type="pws:colorType">
+         <annotation>
+            <documentation>The foreground/stroke/text colour.</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="fill" type="pws:colorType">
+         <annotation>
+            <documentation>The background colour.</documentation>
+         </annotation>
+      </attribute>
+   </attributeGroup>
+   <attributeGroup name="transitions">
+      <annotation>
+         <documentation>Timing controls for automatic animation/transitions of elements</documentation>
+      </annotation>
+      <attribute name="start" type="pws:startType">
+         <annotation>
+            <documentation>How long in seconds before the element appears, or whether it should wait to be user-triggered</documentation>
+         </annotation>
+      </attribute>
+      <attribute name="duration" type="int">
+         <annotation>
+            <documentation>How long in seconds before the element disappears</documentation>
+         </annotation>
+      </attribute>
+   </attributeGroup>
+   <simpleType name="startType">
+      <annotation>
+        <documentation>
+          Either an integer number of seconds specifying how long to wait until starting the transition,
+          or the word "trigger" which specifies waiting for an event (such as a mouse click)
+       </documentation>
+     </annotation>
+      <union>
+         <simpleType>
+            <restriction base="string">
+               <enumeration value="trigger" />
+            </restriction>
+         </simpleType>
+         <simpleType>
+            <restriction base="integer">
+               <minInclusive value="1" />
+            </restriction>
+         </simpleType>
+      </union>
+   </simpleType>
+   <simpleType name="shapeType">
+      <annotation>
+        <documentation>
+          Defines all vector shapes that are supported.
+       </documentation>
+     </annotation>
+      <restriction base="string">
+         <enumeration value="ellipse" />
+         <enumeration value="rectangle" />
+         <enumeration value="line" />
+      </restriction>
+   </simpleType>
+   <simpleType name="colorType">
+      <annotation>
+        <documentation>
+        Defines supported color formats;  <br/>
+        Hash prefixed 6-digit hex codes, in the form of '#RRGGBB'. <br/>
+        Two color vertical gradients, in the form of 'gradient(#RRGGBB,#RRGGBB)'. <br/>
+		Alpha is not supported, nor are 3-digit hex codes.
+       </documentation>
+     </annotation>
+         <union>
+         <simpleType>
+            <restriction base="string">
+               <pattern value="#[0-9A-Fa-f]{6}" />
+            </restriction>
+         </simpleType>
+         <simpleType>
+            <restriction base="string">
+               <pattern value="gradient\(#[0-9A-Fa-f]{6},#[0-9A-Fa-f]{6}\)" />
+            </restriction>
+         </simpleType>
+      </union>
+   </simpleType>
+   <element name="Presentation">
+      <annotation>
+         <documentation>The top-level element that contains the presentation</documentation>
+      </annotation>
+      <complexType>
+         <choice maxOccurs="unbounded">
+            <element name="Meta" minOccurs="0" maxOccurs="unbounded">
+               <annotation>
+                  <documentation>
+                     Meta elements define key-value pairs of meta information that are unlikely to be directly rendered,
+                     such as author information or revision number.
+                  </documentation>
+               </annotation>
+               <complexType>
+                  <attribute name="key" type="string" use="required" />
+                  <attribute name="value" type="string" use="required" />
+               </complexType>
+            </element>
+            <element name="Slide" minOccurs="1" maxOccurs="unbounded">
+               <annotation>
+                  <documentation>
+                     Slide element defines a collection of elements which are shown on screen together.
+                     In the general case each slide is shown one by one.
+                  </documentation>
+               </annotation>
+               <complexType>
+                  <choice maxOccurs="unbounded">
+                     <element name="Text" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                           <documentation>Rich Text element</documentation>
+                        </annotation>
+                        <complexType mixed="true">
+                           <choice maxOccurs="unbounded">
+                              <element name="Format" minOccurs="0" maxOccurs="unbounded">
+                                 <annotation>
+                                    <documentation>Formats the contained text differently to the surrounding text</documentation>
+                                 </annotation>
+                                 <complexType>
+                                    <simpleContent>
+                                       <extension base="string">
+                                          <attributeGroup ref="pws:fonts" />
+                                          <attributeGroup ref="pws:colors" />
+                                       </extension>
+                                    </simpleContent>
+                                 </complexType>
+                              </element>
+                              <element name="Br" minOccurs="0" maxOccurs="unbounded">
+                                 <annotation>
+                                    <documentation>Adds a line break to the text</documentation>
+                                 </annotation>
+                              </element>
+                           </choice>
+                           <attributeGroup ref="pws:position" />
+                           <attributeGroup ref="pws:fonts" />
+                           <attributeGroup ref="pws:colors" />
+                           <attributeGroup ref="pws:transitions" />
+                        </complexType>
+                     </element>
+                     <element name="Shape" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                           <documentation>Vector shape element</documentation>
+                        </annotation>
+                        <complexType>
+                           <attributeGroup ref="pws:position" />
+                           <attributeGroup ref="pws:colors" />
+                           <attribute name="type" type="pws:shapeType" use="required">
+                              <annotation>
+                                 <documentation>The type of shape</documentation>
+                              </annotation>
+                           </attribute>
+                           <attribute name="stroke" type="decimal">
+                              <annotation>
+                                 <documentation>The pixel width of stroke (border) on the shape</documentation>
+                              </annotation>
+                           </attribute>
+                        </complexType>
+                     </element>
+                     <element name="Image" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                           <documentation>
+                           Bitmap Image element.
+                           JPEG images are supported.
+                           Other file formats may be supported, though this is not guaranteed.
+                           </documentation>
+                        </annotation>
+                        <complexType>
+                           <attributeGroup ref="pws:position" />
+                           <attribute name="path" type="string" use="required">
+                              <annotation>
+                                 <documentation>The local filepath of the media file (accepts relative or absolute locations)</documentation>
+                              </annotation>
+                           </attribute>
+                        </complexType>
+                     </element>
+                     <element name="Audio" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                           <documentation>
+                           Embedded audio file.
+                           WAV files are supported.
+                           Other file formats may be supported, though this is not guaranteed.
+                           </documentation>
+                        </annotation>
+                        <complexType>
+                           <attributeGroup ref="pws:position" />
+                           <attribute name="path" type="string" use="required">
+                              <annotation>
+                                 <documentation>The local filepath of the media file (accepts relative or absolute locations)</documentation>
+                              </annotation>
+                           </attribute>
+                        </complexType>
+                     </element>
+                     <element name="Video" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                           <documentation>
+                           Embedded video file.
+                           MP4 files are supported.
+                           Other file formats may be supported, though this is not guaranteed.
+                           </documentation>
+                        </annotation>
+                        <complexType>
+                           <attributeGroup ref="pws:position" />
+                           <attribute name="path" type="string" use="required">
+                              <annotation>
+                                 <documentation>The local filepath of the media file (accepts relative or absolute locations)</documentation>
+                              </annotation>
+                           </attribute>
+                        </complexType>
+                     </element>
+                  </choice>
+                  <attributeGroup ref="pws:fonts" />
+                  <attributeGroup ref="pws:colors" />
+                  <attributeGroup ref="pws:transitions" />
+               </complexType>
+            </element>
+         </choice>
+         <attributeGroup ref="pws:fonts" />
+         <attributeGroup ref="pws:colors" />
+      </complexType>
+   </element>
+</schema>

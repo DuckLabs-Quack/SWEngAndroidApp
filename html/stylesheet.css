@@ -1,0 +1,208 @@
+body{
+	background-color: #EEE;
+	min-height:100vh;
+	transition: margin-left .3s;
+	text-align: justify;
+}
+
+div.text_section{
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #567;
+	padding: 30px 8%;
+	padding-top: 42px;
+	width: 95%;
+	max-width: 1000px;
+	display: block;
+	margin: 10px auto;
+	color: black;
+	border-radius: 10px;
+}
+
+div.text_section h1{
+	border-style: none none solid none;
+	border-width: 1px;
+}
+
+div.text_section h2{
+	border-style: none none solid none;
+	border-width: 1px;
+}
+
+.quote{
+	font-style: italic;
+	background-color: #EEE;
+	
+	border-style: solid;
+	border-color: #9AB;
+	border-width: 1px;
+	
+	border-radius: 10px;
+	
+	padding: 10px;
+	padding-top: 20px;
+	margin: 10px 20px;
+}
+
+.text_section h4{
+	margin-top: 20px;
+}
+
+.anchor{
+  display: block;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  margin-top: -200px;
+  visibility: hidden;
+}
+
+
+.BANNER{
+	max-width: 100%;
+	background-color: #001;
+	display: block;
+	background-position: center;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	color: white;
+	font-size: 60px;
+	padding-bottom: 50px;
+	padding-top: 100px;
+	padding-left: 5%;
+	padding-right:5%;
+}
+
+ul.navigation{
+	position:fixed;
+	width: 100%;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #123;
+	z-index: 999;
+}
+
+ul.navigation li{
+	float: left;
+}
+
+ul.navigation li.menu-button{
+	display: inline-block;
+	color: #567;
+	text-align: center;
+	padding: 10px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	transition: color .2s;
+}
+
+ul.navigation li.logo{
+	display: inline-block;
+	position: center;
+	color: white;
+	text-align: center;
+	padding: 10px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	transition: margin-right .3s;
+}
+
+ul.navigation li.menu-button:hover{
+	color: white;
+}
+
+ul.navigation li a{
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+
+ul.navigation li a:hover{
+	background-color: #234;
+}
+
+.closebtn{
+	color: #567;
+	transition: color .3s;
+}
+
+.closebtn:hover{
+	color: #FFF;
+	cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #123;
+    overflow-x: hidden;
+    transition: .3s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #567;
+    display: block;
+    transition: 0.3s;
+	white-space:nowrap;
+}
+
+.sidenav a:hover {
+    color: #FFF;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.flex-container{
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	list-style-type: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.flex-item {
+  padding: 5px;
+  margin: 10px;
+}
+
+.flex-item p{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+
+.polaroid {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  transition: opacity .2s;
+}

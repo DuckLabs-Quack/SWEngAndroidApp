@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hands Off! HTML Tour">
+    <meta name="author" content="SWEng Group 3">
+    <link rel="icon" href="icon.png">
+
+    <title>Hands Off!</title>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="stylesheet.css" rel="stylesheet">
+	
+  </head>
+
+  <body>
+  
+	<ul class="navigation">
+		<li id="MENU" class="menu-button" style="cursor:pointer;" onclick="openNav()">&#9776; Menu</li>
+		<li id="LOGO" class="logo" style="float:right;">SG3 Enterprise</li>
+	</ul>  
+	
+	<div id="SIDENAV" class="sidenav">
+		<span class="closebtn" onclick="closeNav()">&times;</span>
+		<a href="index.html">Home</a>
+		<a href="documentation.html">Documentation</a>
+		<a href="design.html">Design</a>
+		<a href="finance.html">Finance</a>
+		<a href="research.html">Research</a>
+	</div>
+	
+	
+	
+	<h1 class="BANNER">Hands Off!<br>HTML Product Tour</h1>
+
+	<div class="text_section">
+		<h2>Introduction</h2>
+		<p>
+			Welcome to the SG3 Enterprise HTML Product Tour!
+		</p>
+		<p>
+			This web tour is designed to give you a chronological summary of all work done throughout this project. Supporting documents and relevant files can be found within the menu by clicking the icon in the top left hand corner.
+		</p>
+	</div>
+	
+	
+	<div class="text_section">
+		<h2>Contents</h2>
+		<ul>
+			<li><a href="#FIRST_STEPS">First steps</a>
+				<ul>
+					<li><a href="#PRODUCT_IDEA">Generating product ideas</a></li>
+					<li><a href="#POSITIONS">Positions & elections</a></li>
+				</ul>
+			</li>
+			<li><a href="#THE_TEAM">The team</a></li>
+			<li><a href="#GETTING_STARTED">Documentation Process</a>
+				<ul>
+					<li><a href="#QA_MANUAL">QA Manual</a></li>
+					<li><a href="#FUNCTIONAL_SPEC">Defining product specification</a></li>
+					<li><a href="#PROJECT_PLAN">Project plan & projection</a></li>
+				</ul>	
+			</li>
+			<li><a href="#FINANCE">Finance</a>
+				<ul>
+					<li><a href="#TIMESHEETS">Timesheets</a></li>
+					<li><a href="#FBP">Financial business plan</a></li>
+					<li><a href="#FRX">Financial reports</a></li>
+				</ul>	
+			</li>
+			<li><a href="#FINANCE">Design & specification</a>
+				<ul>
+					<li><a href="#FUNCTIONAL_SPEC">Defining product specification</a></li>
+					<li><a href="#PRODUCT_DESIGN">Product design</a></li>
+				</ul>	
+			</li>
+			<li><a href="#INVESTMENT">Getting investment</a>
+				<ul>
+					<li><a href="#TENDER_PRESENTATION">Group tender presentation</a></li>
+				</ul>
+			</li>
+			<li><a href="#FIRST_ITERATION">Implementation</a>
+				<ul>
+					<li><a href="#PROTOTYPE">Version 1: Prototype</a></li>
+					<li><a href="#PWS">Project-wide standards and contracts</a></li>
+					<li><a href="#RELEASE">Version 2: Release</a></li>
+				</ul>
+			</li>
+			<li><a href="#TESTING">Testing</a></li>
+			<li><a href="#FINANCE_SUMMARY">Financial summary</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="text_section">
+		<div class="anchor" id="FIRST_STEPS"></div>
+		<h2>First steps</h2>
+		<p><i>17/11/2017 - </i></p>
+		<p>
+			Our first ever meeting occored on the 17th of November 2017, where we introduced ourselves and got to know one another. During this meeting we outlined our individual strengths and weaknesses as well as how we felt they could be best deployed in the form of group roles. We also made it a priority to decide on the group's objective in terms of what kind of app we would develop.
+		</p>
+		
+		<div class="anchor" id="PRODUCT_IDEA"></div>
+		<h4>Generating product ideas</h4>
+		<p><i>17/11/2017 - 18/01/2018</i></p>
+		<p>
+			Prior to the first meeting, we agreed on bringing any project ideas to be presented and discussed by the team. The ideas presented were:
+			<div class="quote">
+				<ul>
+					<li>App to teach someone to play a musical instrument (one that can’t play chords)</li>
+					<li>App for climbing to find nearby spots, and possibly expand to share climbing achievements on social media and find other climbing enthusiasts</li>
+					<li>App to teach children tips and tricks for a device like a raspberry pi</li>
+					<li>App to teach someone sign language.</li>
+				</ul>
+			</div>
+			We discussed these ideas at length, outlining advantages and disadvantages in each. After realising there was no clear victor idea, we decided to give in-depth mini-presentations of our favourite ideas at our following meeting (18/01/2018), some of which were new, and have an election to decide. 
+		</p>
+		<p>
+			The final ideas presented were:
+			<div class="quote">
+				<ul>
+					<li>Lab helper app that gives the user useful tools when working with electronics</li>
+					<li>App-based cook book</li>
+					<li>App-based travel guide.</li>
+				</ul>
+			</div>
+			After a round of voting, there was a clear majority for the cook book idea.
+		</p>
+		<p>
+			Now that we had an idea of what we wanted to do, we were in a position to decide on team roles, and who would occupy them.
+		</p>
+		
+		<div class="anchor" id="POSITIONS"></div>
+		<h4>Positions & elections</h4>
+		<p><i>18/01/2018 - 23/01/2018</i></p>
+		<p>
+			Our original set of roles and occupations we decided on the 18th of January were as follows:
+			<div class="quote">
+				<b>Original Roles:</b>
+				<ul>
+					<li>Project Manager: Miranda Lowther</li>
+					<li>Software Manager: Jack Rookes</li>
+					<li>Finance Manager: Miranda Lowther & J&eacute;r&eacute;my S&eacute;rvoz</li>
+					<li>Documentation/QA Manager: Alex Fletcher & Marco Bolt</li>
+					<li>Design & Specification Manager: J&eacute;r&eacute;my S&eacute;rvoz</li>
+					<li>Hardware & Sound Manager: Alex Bennett</li>
+					<li>Marketing Manager / Head of Market Research: StJohn Gilbert</li>
+					<li>GUI Manager: Kevin Sum</li>
+				</ul>
+			</div>
+			however, upon our next meeting a couple of members were concerned about the work load distribution and other commitments, and so we re-discussed our roles an decided on the final group structure shown in the next section.
+		</p>
+	</div>
+	
+	
+	<div class="text_section">
+		<div class="anchor" id="THE_TEAM"></div>
+		<h2>The Team</h2>
+		<p><i>as of 23/01/2018</i></p>
+		<ul>
+<<<<<<< HEAD
+			<li><b>Team Leader / Project Manager: Marco Bolt</b><br>"Everyone is my bitch"</li>
+			<li><b>QA & Documentation Manager: Alex Fletcher</b><br>"I like pens"</li>
+			<li><b>Software Manager: Jack Rookes</b><br>== legend <br>> true</li>
+			<li><b>Design Manager: J&eacute;r&eacute;my S&eacute;rvoz</b><br>I like to make pictures</li>
+			<li><b>Finance Manager: Miranda Lowther</b></li>
+			<li><b>Multimedia & Content Manager: Alex Bennett</b><br></li>
+			<li><b>GUI Developer: Kevin Sum</b><br>"If you want half price fancy microphones hmu"</li>
+			<li><b>Marketing Manager: StJohn Gildert</b><br>It's <i>[sin-jun]</i> not <i>[sidgeon]</i></li>
+		
+=======
+			<li><b>Team Leader / Project Manager: Marco Bolt</b>
+			<li><b>QA & Documentation Manager: Alex Fletcher</b>
+			<li><b>Software Manager: Jack Rookes</b></li>
+			<li><b>Design Manager: J&eacute;r&eacute;my S&eacute;rvoz</b></li>
+			<li><b>Finance Manager: Miranda Lowther</b></li>
+			<li><b>Multimedia & Content Manager: Alex Bennett</b></li>
+			<li><b>GUI Developer: Kevin Sum</b></li>
+			<li><b>Marketing Manager: StJohn Gildert</b></li>
+>>>>>>> f3c8f3c8604478ef047a2f7ebf7c3b41ad5dfa7c
+		</ul>
+	</div>
+	
+	
+	<div class="text_section">
+		<div class="anchor" id="GETTING_STARTED"></div>
+		<h2>Documentation Process</h2>
+		<p>
+			After assigning group roles, we needed to start planning ahead for the project ahead. A slack group was made for all group communications, and a shared online calendar to keep track of deadlines and events.
+		</p>
+		
+		<div class="anchor" id="QA_MANUAL"></div>
+		<h4>QA Manual</h4>
+		<p><i>01/02/2018 onwards</i></p>
+		<p>A thoroughly thought out QA Manual is imperative to the group's success as without it roles and tasks are not properly defined
+		and therefore group members will be unable to focus on what is required from them.
+		The First Iteration of the QA Manual was edited and compiled by the QA & Documentation manager with all individual group members providing the content
+		for their respective sections; not that the Software Manager and QA/Doc Manager created the role definition for Software Engineer.</p>
+		<p> As the project progressed it became clear that changes were required; the initial version and the current version of the QA Manual are 
+		available 
+		<a href="documentation.html#QA_Manual">here</a>
+		as well as some notes documenting the changes between the two.
+		</p>
+		
+		<div class="anchor" id="QA_Assessment_Sheets"></div>
+		<h4>QA Self-Assessment Sheets 1 & 2</h4>
+		<p> Twice during the project, QA self-assessment sheets were filled in by all group members and then reviewed by the QA Manager to ensure that
+		work was being conducted effectively with no internal issues. Any points made on these sheets were brought up and discussed in the <a href="documentation.html#meetingminutes">meetings.</a></p>
+		<p> The filled in Self-Assessment sheets, template and review document are available on the Documentation page of this website 
+		<a href="documentation.html#selfAss">here</a></p></p>
+		
+		<div class="anchor" id="PROJECT_PLAN"></div>
+		<h4>Project plan & projection</h4>
+		<p><i>05/02/2018 - 21/02/2018</i></p>
+		<p>
+			One of the Team Leader's first major tasks was to outline a project plan, outlining the timing and duration of all tasks to be undertaken. These figures would be used in estimating costs, as well as providing a foundational plan to follow to ensure the success of the project.
+		</p>
+		<p>
+			After an initial prediction and cost analysis was completed, team members raised the concern that the hours were far too optimistic, outlining the difference between our predictions and the predictions of other teams. This led to a project plan overhaul, re-estimating the task durations with worst-case scenarios in mind. For comments, see the project overview document of the Team Leader (Marco Bolt).
+		</p>
+		<p>
+			A list of all relevant files is given below.
+		</p>
+		<h5> Current Version </h5>
+		<p><i>Submitted 21/02/2018</i></p>
+		Change Log:
+		<ul>
+			<li>Project plan overhaul to spread task hours evenly across duration of task</li>
+			<li>Workers' hours are based on the tasks, not the task duration based on work hours.</li>
+		</ul>
+		Files:
+		<ul>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Final Draft/Project Plan.mpp">Project Plan (mpp)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Final Draft/WBS.pdf">Work Breakdown Structure (.pdf)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Final Draft/Task Sheet.pdf">Task Sheet (pdf)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Final Draft/Work Sheet.pdf">Employee work hours by task (.pdf)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Final Draft/GANNT.pdf">Project GANNT chart (.pdf)</a></li>
+		</ul>
+		<h5> Previous Versions </h5>
+		<p><b>17/02/2018</b></p>
+		Change Log:
+		<ul>
+			<li>Greatly increased predicted work hours</li>
+		</ul>
+		Files:
+		<ul>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Second Draft/Project Plan.mpp">Project Plan (mpp)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Second Draft/Work Sheet.pdf">Employee work hours by task (.pdf)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/Second Draft/GANNT.pdf">Project GANNT chart (.pdf)</a></li>
+		</ul>
+		<p><b>08/02/2018</b></p>
+		Files:
+		<ul>
+			<li><a href="Resources/Documents/WBS & Projected Costs/First Draft/Project Plan.mpp">Project Plan (mpp)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/First Draft/Work Sheet.pdf">Employee work hours by task (.pdf)</a></li>
+			<li><a href="Resources/Documents/WBS & Projected Costs/First Draft/GANNT.pdf">Project GANNT chart (.pdf)</a></li>
+		</ul>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="FINANCE"></div>
+		<h2>Finance</h2>
+		<div class="anchor" id="TIMESHEETS"></div>
+		<h4>Timesheets</h4>
+		<p>
+			<ul>
+				<li>Initially, our group took a somewhat relaxed approach to the timesheets for this module.</li>
+				<li>However, after a week or two a group member began to manage the timesheets (Finance Manager), and a structure was put in place (which was perfected over the course of the module):
+					<ul>
+						<li>
+							A weekly deadline was quickly implemented-the timesheets for a particular week had to be completed and available on the Google Drive before 5pm on the Wednesday of the following week, and for the first few weeks of this system the group was notified on the messenger service we used to discuss anything in relatino to the module (Slack) twice on the day. 
+						</li>
+						<li>
+							This way, the group members had a few days to fill their timesheet in while providing the Finance Manager with sufficient time to conduct analysis and create the Financial Reports.
+						</li>
+						<li>
+							Every Wednesday evening the Finance Manager checked over everyone's timesheet to ensure that the entered information was correct and accurate, and that no information or timesheet was missing.
+						</li>
+						<li>
+							If a timesheet happened to be filled in incorrectly, or was missing alltogether, after the deadline, the Financial Manager gave out warnings for the first two weeks before implementing a discplinary practice: if the timesheet was filled in incorrectly or was missing, then the hours and wages for that person were not going to be recorded, therefore reducing the number of incomplete or missing timesheets to almost none in the following weeks.
+						</li>
+						<li>
+							In order for every member to fully understand, I explained how the timesheet templates worked in one of the group meetings, and answered any questions asked over the duration of the module.
+						</li>
+						<li>
+							From 07/05/18 onwards, this system was handed over to one of the newly appointed Deputy Finance Managers (the Timesheet Manager), while the Finance Manager oversaw the process and had final say on the recording of the hours provided in the timesheets.
+						</li>
+					</ul>
+				</li>
+				<li>Over the process of this module, two timesheet templates were created (the templates are explained in further detail in the Finance section of the tour).</li>
+				<li>The final full timesheet was for the week commencing 28/5/18, and an incomplete timesheet for 4/6/18 has also been included.</li>
+			</ul>
+		</p>
+		<div class="anchor" id="FBP"></div>
+		<h4>Financial Business Plan</h4>
+		<p><i>[09/02/18-22/02/18]</i></p>
+		<p>
+			<ul>
+				<li>
+					The Financial Business Plan was prepared by the Finance Manager, using the Work Breakdown Structure (WBS), Gannt Chart, and other documents related to the forecast hours our group would work given by the Project Manager (from which forecast wages were calculated for the Cash Flow Forecast). The Finance Manager chose to caculate the wages using direct labour hours rather than assuming that group members would work for 8 hours per day, following discussion with the Financial Adviser, so that the group was only being paid for work done, which would reduce the risk of the loan requested being far greater than what was actually needed.		
+				</li>
+				<li>
+					The Business Plan included a Cash Flow Forecast, calculations of overheads, interest and wages, stated the relevant assumptions, and provided our initial loan request, £31,000.
+				</li>
+				<li>
+					While the plan was submitted on time, and the loan request approved, however, it became apparent within days that the hours had been under-predicted (following research as well as discussion with other groups and the Financial Adviser), and so over the next two weeks multiple versions of the WBS were created, from which there were multiple versions of the Financial Business Plan, the Finance Manager ensuring a temporary Financial Business Plan was created and handed out for the Group Tender Presentation.
+				</li>
+				<li>
+					Eventually the final WBS hours were provided, and the final Financial Business Plan was created in two days (two days before the Financial Report One deadline). In the initial version, the Project Manager decided the forecast hours based upon how long it was believed that each task would take. However, over time the method developed into discussing with every group member how long they foresaw tasks they were either already working on, or eventually would, would be.
+				</li>
+				<li>
+					Both the initial and final drafts of the Financial Business Plan are available in the Finance section.
+				</li>
+			</ul>
+		</p>
+		<div class="anchor" id="FRX"></div>
+		<h4>Financial reports</h4>
+		<p>
+			<h5><u>Financial Report One</u></h5>
+				<p><i>[Reporting Period: 15/01/18 - 12/02/18]</i></p>
+				<ul>
+					<li>
+							As previously mentioned, this Financial Report was created within a few days of receiving the final forecast hours in the form of the WBS from the Project Manager, only having a day to complete it after the final Financial Business Plan was submitted.
+					</li>
+					<li>
+						Initially, in order to analyse our efficiency as a group, the Finance Manager outlined that they needed the following documents:
+						<ol>
+							<li>
+									A spreadsheet comparing the actual and forecast hours for each group member, per week, and calculating a percentage difference for the entire group, also per week.
+							</li>
+							<li>
+									A spreadsheet comparing the actual and forecast hours for each group member, per task, per week, which also indicated which hours were spent on what type of task (Meetings, Documentation (such as the Quality Analysis Manual), Finance, Research, and Development (mostly software-related)), as well as what hours were spent on which deliverables for the actual hours worked (in the form of a bar chart) and another bar chart indicating the adherance of our team to the forecast hours.
+							</li>
+						</ol>
+						These particular documents were chosen following discussion with the Financial Adviser, and because it would enable the Finance Manager to analyse the efficiency of each member of our group, as well as how we were adhering to our forecast wages, a useful indicator for our work potential as larger deadlines, such as the First Iteration.
+					</li>
+					<li>
+						However, as mentioned in the section covering the creation of the WBS, the software used (Microsoft Project) for the creation of the WBS and Gannt Chart distributed the hours in a manner that was undesirable (it would have been preferable for the hours to be greater for the related task as the deadline for the task approached, however the hours for all tasks were evenly distributed throughout the development phase, which resulted in the appearance that our group's actual hours were not being spent on the tasks as forecasted/needed).
+					</li>
+					<li>
+						Given the proximity of the deadline after the Financial Business Plan final draft submission, the Financial Manager delegated the second of these spreadsheets, which was eventually referred to as the 'Analysis Document' to certain group members (Marco, St.John and Jack at first) to fill in. The Finance Manager oversaw the process while completing the rest of the report, and when this document was complete they read through and corrected the spreadsheet accordingly.
+					</li>
+					<li>
+						
+					</li>
+				</ul>
+		</p>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="MARKETING"></div>
+		<h2>Marketing</h2>
+		
+		<div class="anchor" id="Market Research and Analysis"></div>
+		<h4>Market Research and Analysis</h4>
+		<p><i>
+		Market research was an ongoing process throughout the development phase however at first there was a 
+		lot of time spent on researching what the market is, what already exists and which target audience we ]
+		should create our product for. Keeping in mind the 4 Ps of marketing: product,price, promotion and place,
+		the marketing manager scrutinized existing apps and cooking websites to see what worked and what didn't
+		work. A lot of time was spent interacting with these products to really get a feel for what a good cooking
+		app should be.
+		</i></p>
+		<p><i>
+		Reviews provided a great insight to what customers liked and disliked and this feedback was used to give 
+		the group an indication to the group of how the app should be designed and the functionality of the product.
+		The notes made by the marketing manager during the market research phase are available on the research page
+		under <a href="research.html#Research"> Market Research Document.</a>
+		</i><p>
+		
+		<div class="anchor" id="Target Audience"></div>
+		<h4>Target Audience Research</h4>
+		<p><i>
+		
+		Upon realising a gap in the market for a cooking app aimed at 18 - 30 year olds ,
+		an in depth analysis of our target audience was also carried out to really get to grips with who we are aiming 
+		this product at and how to capture their attention. Information about our audience, their ideology and habits
+		is also noted in the <a href="research.html#Research">'Market Research Document'</a>  as well as primary research 
+		carried out in the form of a survey. 
+		</i></p>
+		
+		<div class="anchor" id="Sales Strategy and Marketing Plan"></div>
+		<h4>Sales Strategy and Marketing Plan</h4>
+		<p><i>
+		From the market and audience research a tailored <a href="research.html#Research">marketing strategy</a> was developed taking 
+		into account how and where
+		the product will be marketed. The research section also includes emails that were sent to parent companies of 
+		strong brands among our target audience with aim to generate links with them and to investigate the likelihood 
+		of sourcing samples and other products to give away in our exclusive rewards club. Their responses have also 
+		been noted, please note that to contact Cadbury's, the marketing manager had to fill out an on-line form rather 
+		than sending an email however the content of this form has been put in a letter and added to the research folder. 
+		</i></p>
+		<h4>Outcomes from Market Research</h4>
+		<p><i>
+		The information gathered from the market research influenced the final outcome of the product greatly. By gaining the solid foundation
+		and understanding of the market and audience the product was tailored to suit. Examples of this are as follows:
+		<ul>
+		<li>Layout and theme </li>
+		<ul>
+			<li>Scrutiny and reviews of competitors revealed what successful apps look like and this information was fed back to the 
+			design team</li>
+		</ul>
+		<li>Features</li>
+		<ul>
+			<li>Once again scrutiny and reviews provided a great insight into what desirable features successful similar app included
+			and aided in the development of the functionality of the product</li>
+		</ul>
+		<li>Pricing Strategy and Business Model</li>
+		<ul>
+			<li>From the primary research carried out and market research a business model was agreed upon with the finance manager.
+			The type of adverts we are using was decided upon based upon the marketing managers experiences and reviews of products with
+			adverts nested in them</li>
+			
+		</ul>
+		</ul>
+		A document detailing how the market research influenced the final outcome of the product can be found <a href="research.html#Research">here</a>
+		under 'Outcomes From Market Research' or by opening the research page. The page includes all relevant documents used for marketing, please 
+		feel to view at your leisure. 
+		</i></p>
+	</div>
+
+	<div class="text_section">
+	
+		<div class="anchor" id="FIRST_ITERATION"></div>
+		<h2>Design & specification</h2>
+		<p><i>22/01/2018 - 02/02/2018</i></p>
+		<p>
+			Once the enterprise was set up, it was time to start visualising what our app would look like and how it would behave. As well as providing a template for the software development team, this also had the purpose of enticing investors in our project.
+		</p>
+		
+		<div class="anchor" id="FUNCTIONAL_SPEC"></div>
+		<h4>Defining product specification</h4>
+		<p><i>18/01/2018 - 02/02/2018</i></p>
+		<p>
+			From meeting 2 (18/01/2018) we already had a good idea of what we wanted the product to do. A set of basic functionalities were outlined as follows (Taken directly from the meeting minutes):
+			<div class="quote">
+				<ul>
+					<li>The app is a cooking app with recipes available for the user to have access to via a server</li>
+					<li>A shopping list will be available for each recipe, and available to be downloaded for when there isn’t an internet connection</li>
+					<li>One of the main USP’s of the product is that it displays the recipe instructions/steps in a slideshow format, and that the user can switch between steps in a manner (to be finalised) that would require minimal usage of their hands, which would be useful for many recipes</li>
+					<li>The app will have the optional function of also playing a recording of someone reading the recipe steps</li>
+					<li>People will be able to add their own recipes, and in future iterations it would be an aim to have affiliates who would sell their recipes (possibly in the form of ebooks) on our app, from which we would make commission.</li>
+				</ul>
+			</div>
+		</p>
+		
+		<div class="anchor" id="PRODUCT_DESIGN"></div>
+		<h4>Product design</h4>
+		<p><i>26/01/2018 - 19/02/2018</i></p>
+		<p> We started working on the design during the design meeting(26/01/2018), during this meeting we laid down on paper our first ideas for the layout of the app. We drew all the pages we thought we needed for the app thinking about the interaction between them and aiming for easy to use interface.
+			<ul>
+				<li><a href="Resources\Documents\Design\image1.jpeg">Homepage preliminary design</a></li>
+				<li><a href="Resources\Documents\Design\image2.jpeg">Menu preliminary design</a></li>
+			</ul>
+		</p>
+		<p> We then used proto.io, an app prototyping service to design the app and the interactions within.
+			<ul>
+				<li><a href="Resources\Documents\Design\1.1-Home(1).png">Homepage design on proto.io</a></li>
+				<li><a href="Resources\Documents\Design\1.2-Search(1).png">Searchpage design on proto.io</a></li>
+			</ul>
+		</p>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="INVESTMENT"></div>
+		<h2>Getting investment</h2>
+		<p><i>[INSERT DATES HERE]</i></p>
+		<p>
+			After the financial business plan was put together, 
+		</p>
+		
+		<div class="anchor" id="TENDER_PRESENTATION"></div>
+		<h4>Group tender presentation</h4>
+		<p><i>19/02/2018</i></p>
+		<p>
+			The tender presentation was made to entice potential investors in our product. It was created with the aim of getting our audience to visualize using the app in use, as well as the reinforcement of a well designed financial business plan. The presentation was led by the Team Leader, with the Marketing Manager, Finance Manager and Design Team presenting individual sections. 
+		</p>
+		Files:
+		<ul>
+		<li><a href = "Resources/Documents/Tender Presentation/tender.pdf">Tender presentation slides</a></li>
+		</ul>
+		
+	</div>
+	
+	<div class="text_section">
+	
+		<div class="anchor" id="IMPLEMENTATION"></div>
+		<h2>Implementation</h2>
+		<p><i>12/02/2018 - present</i></p>
+		<p>
+<<<<<<< HEAD
+			Now that our loan from our Financial Adviser/Investor had been approved, we were ready to begin development of the app. As outlined in the QA Manual, we deployed an Agile programming methodology, following a series of programmer stories in realising our designs and specifications.
+=======
+			Once our [FINANCIAL REQUEST THING] had been approved and the designs and specification were outlined, we were ready to begin development of the app. As outlined in the QA Manual, we deployed an Agile programming methodology, following a series of programmer stories in realising our designs and specifications.
+		</p>
+		<p>
+			Programming technically started on the 15th of January, however that was the Software Manager setting up the project and getting everything ready. Programming actually started gaining momentum after the group Tender presentation. 
+		</p>
+		<div class="anchor" id="PROTOTYPE"></div>
+		<h4>Version 1: Prototype</h4>
+		<p><i>15/01/2018 - 16/03/2018</i></p>
+		<p>
+			The development of the prototype could be split into several sections:
+			<ul>
+				<li>Server</li>
+				<li>Functionality</li>
+				<li>GUI</li>
+			</ul>
+>>>>>>> f3c8f3c8604478ef047a2f7ebf7c3b41ad5dfa7c
+		</p>
+		<p><b>Server</b></p>
+		<p>
+			The server was written in python utilising the "Flask" microframework. This was a system that would handle basic http requests, and pass information to any connected instances of the app.
+		</p>
+		<p><b>Functionality</b></p>
+		<p>
+			The functionality development consisted largely of data handling and management. For the prototype, this included:
+			<ul>
+				<li>Data handling</li>
+				<li>XML Parsing</li>
+				<li>Filtering</li>
+				<li>Generating & drawing recipe thumbnails to screen</li>
+			</ul>
+		</p>
+		<p><b>GUI</b></p>
+		<p>
+			GUI development saw the generation of the page template files, and code that interfaced with it. The tasks involved in GUI implementation for the prototype included:
+			<ul>
+				<li>Layout descriptions (XML)</li>
+				<li>Activity code (making each page displayable in the app)</li>
+				<li>Interfacing with objects on screen</li>
+			</ul>
+		</p>
+		<p>
+			The prototype as on submission on Friday 16th March is demonstrated in a demo video below:
+			<Video src="Resources/Videos/HandsOffDemo1.mp4" class="polaroid" style="display: block; width: 90%; max-width: 500px; margin: 10px auto;" controls></video>
+		</p>
+		
+		
+
+		<div class="anchor" id="PWS"></div>
+		<h4>Project-wide standards and contracts</h4>
+		<p><i>13/02/2018</i></p>
+		<p>
+			On the 13th of Febuary, representetives of each team gathered to discuss the project-wide standards, and how to define them. These standards would be applied to the presentation tool that would be implemented in each of our products.This process was largely led by Lauren Thomasello and Zak West, snd resulted in an xml schema that would be used when developing presentations.
+		</p>
+			Documents:
+			<ul>
+				<li><a href = "Resources/Documents/Schema/schema.xsd">schema.xsd</a></li>
+			</ul>
+		
+		
+		
+		<div class="anchor" id="RELEASE"></div>
+		<h4>Version 2: Release</h4>
+		<p><i>16/04/2018 - present</i></p>
+		<p>
+			The second stage of the development pushed away from a proof of concept, and started filling in the gaps and templates with functional code. As with the prototype stage, the development could be split into the three sections:
+			<ul>
+				<li>Server</li>
+				<li>Functionality</li>
+				<li>GUI</li>
+			</ul>
+		</p>
+		<p><b>Server</b></p>
+		<p>
+			Server development saw security improvement, as well as expanding the servers ability to transfer files, with the aim of storing all files related to a recipe locally on the server. The full list of server-side developments is:
+			<ul>
+				<li>Security Improvements</li>
+				<li>Presentation transfer</li>
+				<li>Image transfer</li>
+				<li>Video transfer</li>
+			</ul>
+		</p>
+		<p><b>Functionality</b></p>
+		<p>
+			The functionality development was a continuation of the prototype functionalities, as well as methods to determine the contents of the GUI. This included:
+			<ul>
+				<li>Search algorithm</li>
+				<li>Recipe suggestion algorithm</li>
+				<li>In-app recipe creation</li>
+				<li>Image downloading and management</li>
+			</ul>
+		</p>
+		<p><b>GUI</b></p>
+		<p>
+			GUI development for the release version was more of the same. New pages were created, and layouts were updated and improved.
+		</p>
+		
+		
+		
+		
+		<div class="anchor" id="IMPLEMENTATION_ANALYSIS"></div>
+		<h4>Analysis</h4>
+		<p>
+			Below is a graph taken from the our github pages, and shows the number of modified lines of code over time.
+		</p>
+		
+		<Img class="polaroid" src = "Resources/Images/ProgrammingTimeline.JPG" style="width: 80%; margin: 20px auto; display: block;"></Img>
+		
+		<p>This can be analyzed further by looking at individual contributions from each team member in the project:</p>
+		
+		<ul class="flex-container">
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/JR.JPG" style="max-width: 300px;"></Img>
+				<p>Jack Rookes</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/MB.JPG" style="max-width: 300px;"></Img>
+				<p>Marco Bolt</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/KS.JPG" style="max-width: 300px;"></Img>
+				<p>kevin Sum</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/SG.JPG" style="max-width: 300px;"></Img>
+				<p>StJohn Gilbert</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/AB.JPG" style="max-width: 300px;"></Img>
+				<p>Alex Bennett</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/AF.JPG" style="max-width: 300px;"></Img>
+				<p>Alex Fletcher</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/ML.JPG" style="max-width: 300px;"></Img>
+				<p>Miranda Lowther</p>
+			</li>
+			<li class="flex-item polaroid">
+				<Img src="Resources/Images/Contributions/JS.JPG" style="max-width: 300px;"></Img>
+				<p>J&eacute;r&eacute;my S&eacute;rvoz</p>
+			</li>
+		</ul>
+		<b>Things to Note:</b>
+		<ul>
+			<li>These graphs are NOT representitive of individual effort in the project!</li>
+			<li>The commits by Marco Bolt before the 11th Febuary were largely test commits that didn't actually contain changes!</li>
+			<li>Spring holidays were between 19th March and 16th April</li>
+			<li>The Design and Construction module finished on Thursday 3rd May</li>
+		</ul>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="TESTING"></div>
+		<h2>Testing</h2>
+		<p><i>[INSERT DATES HERE]</i></p>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="FINANCE_SUMMARY"></div>
+		<h2>Financial summary</h2>
+		<p><i>[05/06/2018 - Present]</i></p>
+		<p>Testing was conducted following a Testing and Integration spreadsheet created by the Software manager. This can be found <a href="Resources\Documents\Testing and Integration plan.xlsx">here</a>.</p>
+-		<p>Testing was broken down into 5 test sets, which were to be worked through in order. These sets are as follows; First Iteration, Second iteration (Mandatory), Second iteration (Desirables), Second iteration (Optional) and contract code tests.</p> 
+-		<p>To pass a test, the app must be capable of completeing the function required of it as specified in the testing sheet.
+-		If a test were to fail, then the testing process would be paused whilst the issue was rectified.
+-		Once fixed, the test could be marked as a pass. If an issue could not be fixed for whatever reason, then the test would be marked as a failure, however this did not occur during testing of the Hands Off application.
+-		If the criteria for a test was not met and there was no evidence of the code having been developed, the test would be marked as missing.
+-		When testing was completed, the tests that were marked as missing, would be reviewed and if possible, added to the project by team members.</p>
+	</div>
+	
+	<div class="text_section">
+		<div class="anchor" id="INDIVIDUAL_REPORTS"></div>
+		<h2>Individual Reports</h2>
+		<p><i>[06/06/2018]</i></p>
+		<p>All users wrote individual reports as defined by the requirements of the project, they can be viewed
+		  <a href="documentation.html#IndividualReportsDoc">here</a>.</p>
+	</div>
+	
+	<script src="sidenav.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
